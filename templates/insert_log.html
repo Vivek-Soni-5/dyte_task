@@ -1,0 +1,42 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Input Form</title>
+</head>
+<body>
+
+    <h1>JSON Input Form</h1>
+
+    <form id="jsonForm">
+        <label for="jsonData">Enter JSON data:</label>
+        <textarea id="jsonData" name="jsonData" rows="4" cols="50"></textarea>
+        <br>
+        <input type="button" value="Submit" onclick="submitForm()">
+    </form>
+
+    <script>
+        function submitForm() {
+            var jsonData = document.getElementById("jsonData").value;
+
+            // Parse the JSON data to ensure it is valid
+            try {
+                jsonData = JSON.parse(jsonData);
+            } catch (e) {
+                console.error("Invalid JSON data:", e);
+                return;
+            }
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "/insert_logs", true);
+            xhr.setRequestHeader("Content-Type", "application/json");
+
+            // Send the JSON data as the request payload
+            xhr.send(JSON.stringify(jsonData));
+        }
+    </script>
+
+</body>
+</html>
