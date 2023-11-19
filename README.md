@@ -1,7 +1,7 @@
 # Log Ingestor and Query Interface (SDE-1 and SDE Intern Assignment)
 
-Developed a log ingestor system that can efficiently handle vast volumes of log data, and offer a simple interface for querying this data using full-text search or specific field filters.
-Both the systems (the log ingestor and the query interface) has been built using flask , HTML , CSS & Javascript.
+Developed a log ingestor system that can efficiently handle vast volumes of log data, and offer a simple interface for querying this data using full-text search or specific field filters.\n
+Both the systems (the log ingestor and the query interface) has been built using flask , HTML , CSS & Javascript.\n
 I am using firebase realtime database for storing the logs and provided the credendials for your use. If you want to use your own credendials then get the cred from firebase.
 
 ## Quick Start (Steps to Run this project)
@@ -23,7 +23,7 @@ python -m venv venv
 3. Start Virtual Environment (if setup virtual enviroment)
 
 ```
-Scripts/venv/activate
+venv/Scripts/activate
 ```
 
 4. Install dependencies
