@@ -4,16 +4,27 @@ import pyrebase
 app = Flask(__name__)
 
 # Configure Firebase
-config = {
-    'apiKey': "AIzaSyCsXPeq9GgTyAqXEFg-rRKEQqJ9B2zB5fs",
-    'authDomain': "dyte-task.firebaseapp.com",
-    'databaseURL': "https://dyte-task-default-rtdb.firebaseio.com",
-    'projectId': "dyte-task",
-    'storageBucket': "dyte-task.appspot.com",
-    'messagingSenderId': "466846795130",
-    'appId': "1:466846795130:web:fa8ffa0ef683eaf8b6c2c3",
-    'measurementId': "G-SPKEPGJCZ4"
-  }
+# config = {
+#     'apiKey': "AIzaSyCsXPeq9GgTyAqXEFg-rRKEQqJ9B2zB5fs",
+#     'authDomain': "dyte-task.firebaseapp.com",
+#     'databaseURL': "https://dyte-task-default-rtdb.firebaseio.com",
+#     'projectId': "dyte-task",
+#     'storageBucket': "dyte-task.appspot.com",
+#     'messagingSenderId': "466846795130",
+#     'appId': "1:466846795130:web:fa8ffa0ef683eaf8b6c2c3",
+#     'measurementId': "G-SPKEPGJCZ4"
+#   }
+
+config  = {
+  'apiKey': "AIzaSyBy--Uuj1Hn-I6Nv3Z9FbT1jMq0gOA5imo",
+  'authDomain': "dyte-task-5020f.firebaseapp.com",
+  'databaseURL': "https://dyte-task-5020f-default-rtdb.firebaseio.com",
+  'projectId': "dyte-task-5020f",
+  'storageBucket': "dyte-task-5020f.appspot.com",
+  'messagingSenderId': "472109831458",
+  'appId': "1:472109831458:web:85a65c6fb2db9b953d817b",
+  'measurementId': "G-MLPCX6JY5N"
+}
 
 firebase = pyrebase.initialize_app(config)
 db = firebase.database()
